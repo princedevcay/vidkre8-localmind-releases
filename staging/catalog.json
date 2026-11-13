@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": 4,
+  "version": 5,
   "published": "2026-11-13",
   "key_id": "test-2026-11",
   "handoff_paused": false,
@@ -27,9 +27,9 @@
           "program": "llama-b11904/llama-server"
         },
         "win32-x64": {
-          "url": "https://github.com/ggml-org/llama.cpp/releases/download/b11904/llama-b11904-bin-win-cpu-x64.zip",
-          "sha256": "514f76c08e8291a56255d2d58113cb58d37307cbb0af818bf28d3563f871df4b",
-          "size": 24228124,
+          "url": "https://github.com/ggml-org/llama.cpp/releases/download/b11904/llama-b11904-bin-win-vulkan-x64.zip",
+          "sha256": "443abc508652aca542749827d84848bc69182eb172c0bc74148f66736e74aa4e",
+          "size": 37051600,
           "archive": "zip",
           "program": "llama-server.exe"
         }
@@ -120,7 +120,8 @@
         "name": "Apache 2.0",
         "summary": "Free to use, including for work. Made by the Qwen team at Alibaba Cloud.",
         "must_accept": false
-      }
+      },
+      "max_context": 32768
     },
     {
       "id": "qwen3-4b",
@@ -146,14 +147,15 @@
         "name": "Apache 2.0",
         "summary": "Free to use, including for work. Made by the Qwen team at Alibaba Cloud.",
         "must_accept": false
-      }
+      },
+      "max_context": 32768
     },
     {
       "id": "qwen3-8b",
       "kind": "llm",
       "engine": "llama-cpp",
       "name": "Qwen3 Large",
-      "good_at": "The most capable writing, reasoning and translation here. Needs a stronger computer.",
+      "good_at": "Stronger writing, reasoning and translation. Needs a stronger computer.",
       "goals": [
         "chat",
         "docs",
@@ -167,12 +169,13 @@
         "size": 5027783488
       },
       "needs_memory_gb": 7,
-      "quality": 8,
+      "quality": 7,
       "licence": {
         "name": "Apache 2.0",
         "summary": "Free to use, including for work. Made by the Qwen team at Alibaba Cloud.",
         "must_accept": false
-      }
+      },
+      "max_context": 32768
     },
     {
       "id": "qwen2.5-coder-1.5b",
@@ -195,7 +198,8 @@
         "name": "Apache 2.0",
         "summary": "Free to use, including for work. Made by the Qwen team at Alibaba Cloud.",
         "must_accept": false
-      }
+      },
+      "max_context": 32768
     },
     {
       "id": "qwen2.5-coder-7b",
@@ -213,12 +217,13 @@
         "size": 4683073536
       },
       "needs_memory_gb": 6.5,
-      "quality": 9,
+      "quality": 8,
       "licence": {
         "name": "Apache 2.0",
         "summary": "Free to use, including for work. Made by the Qwen team at Alibaba Cloud.",
         "must_accept": false
-      }
+      },
+      "max_context": 32768
     },
     {
       "id": "sd15",
@@ -321,6 +326,108 @@
         "summary": "Free to use, including for work. Whisper, made by OpenAI.",
         "must_accept": false
       }
+    },
+    {
+      "id": "qwen3-14b",
+      "kind": "llm",
+      "engine": "llama-cpp",
+      "name": "Qwen3 Extra Large",
+      "good_at": "Careful writing, long documents and harder reasoning. For computers with plenty of memory or a strong graphics card.",
+      "goals": [
+        "chat",
+        "docs",
+        "translate",
+        "code"
+      ],
+      "format": "gguf",
+      "file": {
+        "url": "https://huggingface.co/Qwen/Qwen3-14B-GGUF/resolve/530227a7d994db8eca5ab5ced2fb692b614357fd/Qwen3-14B-Q4_K_M.gguf",
+        "sha256": "500a8806e85ee9c83f3ae08420295592451379b4f8cf2d0f41c15dffeb6b81f0",
+        "size": 9001752960
+      },
+      "needs_memory_gb": 11,
+      "quality": 8,
+      "licence": {
+        "name": "Apache 2.0",
+        "summary": "Free to use, including for work. Made by the Qwen team at Alibaba Cloud.",
+        "must_accept": false
+      },
+      "max_context": 32768
+    },
+    {
+      "id": "qwen3-32b",
+      "kind": "llm",
+      "engine": "llama-cpp",
+      "name": "Qwen3 Largest",
+      "good_at": "The most capable chat AI here. For powerful computers: 32 GB of memory or more, or a large graphics card.",
+      "goals": [
+        "chat",
+        "docs",
+        "translate",
+        "code"
+      ],
+      "format": "gguf",
+      "file": {
+        "url": "https://huggingface.co/Qwen/Qwen3-32B-GGUF/resolve/938a7432affaec9157f883a87164e2646ae17555/Qwen3-32B-Q4_K_M.gguf",
+        "sha256": "efd971561896866f0e910cce52761ca77b1b138090c7f15fe284676d57d1f689",
+        "size": 19762149024
+      },
+      "needs_memory_gb": 22,
+      "quality": 9,
+      "licence": {
+        "name": "Apache 2.0",
+        "summary": "Free to use, including for work. Made by the Qwen team at Alibaba Cloud.",
+        "must_accept": false
+      },
+      "max_context": 32768
+    },
+    {
+      "id": "qwen2.5-coder-14b",
+      "kind": "llm",
+      "engine": "llama-cpp",
+      "name": "Code Helper Extra Large",
+      "good_at": "Larger code projects, careful fixes and longer explanations. For computers with plenty of memory.",
+      "goals": [
+        "code"
+      ],
+      "format": "gguf",
+      "file": {
+        "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-14B-Instruct-GGUF/resolve/d0a692ef765eefbf2fabb130b3cb2e8917e3d225/qwen2.5-coder-14b-instruct-q4_k_m.gguf",
+        "sha256": "c1e659736d89ac1065fb495330fb824d94001974a4bfa78e7270e43476a8d940",
+        "size": 8988110272
+      },
+      "needs_memory_gb": 11,
+      "quality": 9,
+      "licence": {
+        "name": "Apache 2.0",
+        "summary": "Free to use, including for work. Made by the Qwen team at Alibaba Cloud.",
+        "must_accept": false
+      },
+      "max_context": 32768
+    },
+    {
+      "id": "qwen2.5-coder-32b",
+      "kind": "llm",
+      "engine": "llama-cpp",
+      "name": "Code Helper Largest",
+      "good_at": "The most capable code help here. For powerful computers: 32 GB of memory or more, or a large graphics card.",
+      "goals": [
+        "code"
+      ],
+      "format": "gguf",
+      "file": {
+        "url": "https://huggingface.co/Qwen/Qwen2.5-Coder-32B-Instruct-GGUF/resolve/9d3053fce650fe1cdbdb75998c2a87add9d178ef/qwen2.5-coder-32b-instruct-q4_k_m.gguf",
+        "sha256": "4d64b316b5e6319d9613e0d97935d9ebd631fc7e334da400d00085eca749d085",
+        "size": 19851335872
+      },
+      "needs_memory_gb": 22,
+      "quality": 10,
+      "licence": {
+        "name": "Apache 2.0",
+        "summary": "Free to use, including for work. Made by the Qwen team at Alibaba Cloud.",
+        "must_accept": false
+      },
+      "max_context": 32768
     }
   ]
 }
