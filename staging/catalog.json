@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": 5,
+  "version": 6,
   "published": "2026-11-13",
   "key_id": "test-2026-11",
   "handoff_paused": false,
@@ -428,6 +428,32 @@
         "must_accept": false
       },
       "max_context": 32768
+    },
+    {
+      "id": "realesrgan-x4",
+      "kind": "image",
+      "engine": "sd-cpp",
+      "name": "Picture Sharpener",
+      "good_at": "Sharpens pictures while enlarging them to full video sizes. Installed along with a picture maker.",
+      "goals": [
+        "images"
+      ],
+      "format": "safetensors",
+      "file": {
+        "url": "https://huggingface.co/Comfy-Org/Real-ESRGAN/resolve/5fd49b7b278836f48af63ecd314d0f98ab336105/RealESRGAN_x4plus.safetensors",
+        "sha256": "37f9a931c215f040aa6d50f711f2cb115f713c46df1d0d6469a8bd7bfe9a60bb",
+        "size": 66857836
+      },
+      "needs_memory_gb": 1,
+      "quality": 5,
+      "licence": {
+        "name": "BSD 3-Clause",
+        "summary": "Free to use, including for work. Real-ESRGAN, made by Xintao Wang and others.",
+        "must_accept": false
+      },
+      "upscaler": {
+        "scale": 4
+      }
     }
   ]
 }
