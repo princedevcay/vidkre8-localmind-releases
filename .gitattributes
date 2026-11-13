@@ -1,0 +1,4 @@
+# The signed model list must reach every computer byte for byte, or its signature fails
+staging/catalog.json binary
+staging/catalog.sig binary
+* text=auto eol=lf
