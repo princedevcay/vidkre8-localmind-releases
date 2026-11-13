@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": 3,
+  "version": 4,
   "published": "2026-11-13",
   "key_id": "test-2026-11",
   "handoff_paused": false,
@@ -55,6 +55,13 @@
           "size": 30052985,
           "archive": "zip",
           "program": "sd-cli.exe"
+        },
+        "darwin-x64": {
+          "url": "https://github.com/princedevcay/vidkre8-localmind-releases/releases/download/engines-2/sd-master-5d78740-bin-macos-x64-cpu.tar.gz",
+          "sha256": "8002f7d08819ac73821247aa88b955daf0c72d03ddc93d21eb70a62148036fda",
+          "size": 17070152,
+          "archive": "tar.gz",
+          "program": "sd/sd-cli"
         }
       }
     },
@@ -228,7 +235,7 @@
         "sha256": "e9476a13728cd75d8279f6ec8bad753a66a1957ca375a1464dc63b37db6e3916",
         "size": 2132696762
       },
-      "needs_memory_gb": 6,
+      "needs_memory_gb": 4,
       "quality": 4,
       "licence": {
         "name": "CreativeML OpenRAIL-M",

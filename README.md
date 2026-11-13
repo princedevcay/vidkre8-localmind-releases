@@ -20,6 +20,7 @@ The builds under Releases are unmodified builds of these projects, with their li
 | Program | Project | Licence | Source version |
 |---|---|---|---|
 | whisper.cpp (speech to text) | github.com/ggml-org/whisper.cpp | MIT | tag b5454 (v1.9.5), commit d1be6fde11ac6e0407606b4e42fe72d34add8037 |
+| stable-diffusion.cpp (pictures), Intel Mac, processor only | github.com/leejet/stable-diffusion.cpp | MIT | master-1092-5d78740, commit 5d787408c0e053568c4558e3c9043e8ebabd4cae |
 
 The app downloads a build only when a signed model list names it, and installs it only if its SHA-256 matches the list.
 
